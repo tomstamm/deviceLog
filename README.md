@@ -29,7 +29,7 @@ If you want to add other fonts to your project, you would do that here.
 Hooking up for app views to the deviceLog object:
 In your storyboard, Add an empty view to hold your deviceLog view and add the instance reference to your view controller's .h file.
 Then in your view controller call the attachTextView method in the deviceLog object.
-
+<pre>
 Example 1 (Collapsible deviceLog):
 - (void) viewWillAppear:(BOOL)animated {
 [[deviceLog sharedInstance] attachTextView: deviceLogView               // The view for the deviceLog from the storyboard
@@ -54,12 +54,13 @@ anchorType:noAnchor ];       	            // No collapsing.
 [[deviceLog sharedInstance] setButtonTextColor:[UIColor whiteColor]];
 [[deviceLog sharedInstance] logStatus:@"BEGIN!"];
 }
-
+</pre>
 After the deviceLog is initialize it's singleton object can be called from anywhere in your app.
 
 See the deviceLog.h file for method reference.
 
 Some of the deviceLogs initial preferences can be overridden by the file deviceLog.plist.  The values are:
+<pre>
 newOnTop		Boolean	YES = New messages are added to the top of the text view.
 NO = New messages are added to the bottom of the text view.
 liveScrollToNew		Boolean	YES = Scroll to new content automatically when it is Added.
@@ -88,4 +89,4 @@ cancelControlActive	Boolean	YES = Show "Cancel" button in function menu.
 NO = Hide "Cancel" button in function menu.
 font			String		Initial font family (default is "AndaleMono").
 fontSize		Number		Initial font size (default is 18.0).
-
+</pre>
