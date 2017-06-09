@@ -26,7 +26,7 @@
     [super viewWillAppear:animated];
     
     [[deviceLog sharedInstance] attachTextView: logView                 // The view for the deviceLog from the storyboard
-                                         color:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.6]
+                                         color:[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.7]
                                                                         // The background color for the deviceLog View
                                     anchorType:bottomAnchor ];          // Anchored the deviceLog to the bottom of the screen.
     
